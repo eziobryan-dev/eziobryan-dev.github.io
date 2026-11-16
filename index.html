@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pause Dico — un mot par jour</title>
+  <meta name="description" content="Pause Dico : chaque jour, découvrez un nouveau mot du dictionnaire français, testez-vous avec des quiz et complétez votre Alphadex.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='115' fill='%234F46E5'/%3E%3Cpath d='M175 235 L215 315 L256 265 L297 315 L337 235' stroke='white' stroke-width='30' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #f7f7fb;
+      --surface: #ffffff;
+      --text: #1e1b3a;
+      --muted: #5b5875;
+      --primary: #4f46e5;
+      --primary-2: #7c3aed;
+      --border: #e4e2f0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f0e1a;
+        --surface: #1a1830;
+        --text: #eeedf7;
+        --muted: #a9a6c4;
+        --primary: #8b85ff;
+        --primary-2: #b08cff;
+        --border: #2c2950;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main { max-width: 880px; margin: 0 auto; padding: 56px 20px 32px; }
+    .hero { text-align: center; }
+    .hero svg { width: 112px; height: 112px; filter: drop-shadow(0 12px 24px rgba(79, 70, 229, .35)); }
+    h1 {
+      margin: 20px 0 8px;
+      font-size: clamp(2.2rem, 6vw, 3.2rem);
+      line-height: 1.1;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .tagline { margin: 0 auto; max-width: 560px; color: var(--muted); font-size: 1.15rem; }
+    .cta {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .cta:hover { filter: brightness(1.08); }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 56px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .features li {
+      padding: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+    .features h2 { margin: 6px 0 4px; font-size: 1.1rem; }
+    .features p { margin: 0; color: var(--muted); font-size: .97rem; }
+    .emoji { font-size: 1.6rem; }
+    footer {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 24px 20px 40px;
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--primary); }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <svg viewBox="0 0 512 512" role="img" aria-label="Logo Pause Dico">
+        <defs>
+          <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4F46E5" />
+            <stop offset="100%" stop-color="#7C3AED" />
+          </linearGradient>
+          <linearGradient id="pageGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="100%" stop-color="#EEF2FF" />
+          </linearGradient>
+        </defs>
+        <rect width="512" height="512" rx="115" fill="url(#bgGrad)" />
+        <path d="M 120 190 C 170 170, 220 185, 256 200 C 292 185, 342 170, 392 190 V 350 C 342 330, 292 345, 256 360 C 220 345, 170 330, 120 350 Z" fill="url(#pageGrad)" />
+        <path d="M 256 200 V 360" stroke="#6366F1" stroke-width="10" stroke-linecap="round" opacity="0.3" />
+        <path d="M 175 235 L 215 315 L 256 265 L 297 315 L 337 235" stroke="#4F46E5" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <path d="M 380 120 L 386 138 L 404 144 L 386 150 L 380 168 L 374 150 L 356 144 L 374 138 Z" fill="#FBBF24" />
+      </svg>
+      <h1>Pause Dico</h1>
+      <p class="tagline">Chaque jour, une petite pause pour découvrir un nouveau mot du dictionnaire français.</p>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=com.toutai.pausedico">Télécharger sur Google Play</a>
+    </section>
+
+    <ul class="features">
+      <li>
+        <span class="emoji">✨</span>
+        <h2>Un mot par jour</h2>
+        <p>Choisissez parmi trois thèmes et découvrez un mot rare, sa nature et sa définition.</p>
+      </li>
+      <li>
+        <span class="emoji">🧠</span>
+        <h2>Des quiz pour retenir</h2>
+        <p>Le dimanche, le quiz de la semaine. Et régulièrement, les quiz du mois et de l'année.</p>
+      </li>
+      <li>
+        <span class="emoji">🏆</span>
+        <h2>L'Alphadex</h2>
+        <p>Collectionnez les 26 lettres dorées, trouvez des marque-pages rares… puis visez l'émeraude.</p>
+      </li>
+      <li>
+        <span class="emoji">📖</span>
+        <h2>Votre carnet</h2>
+        <p>Retrouvez tous vos mots, aimez vos préférés et partagez-les en un geste.</p>
+      </li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>
+      <a href="privacy.html">Politique de confidentialité</a>
+      · Définitions issues du <a href="https://fr.wiktionary.org/">Wiktionnaire</a>,
+      sous licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>
+    </p>
+    <p>© 2026 Pause Dico</p>
+  </footer>
+</body>
+</html>
